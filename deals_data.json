@@ -2,385 +2,1476 @@
   "deals": [
     {
       "deal_id": "D001",
-      "company_name": "Acme Forge Ltd",
-      "deal_size": 250000,
+      "company_name": "Acme Manufacturing",
+      "deal_size": 185000,
       "stage": "closed_won",
+      "industry": "Manufacturing",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Send detailed ROI calculator by end of week",
+          "fulfilled": true
+        },
+        {
+          "promise": "Provide ERP integration architecture diagram",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-06-10",
-          "notes": "Introduced platform capabilities; CFO expressed interest in reducing inventory holding costs by 15%.",
-          "objection_type": "none",
-          "stakeholder": "Chief Financial Officer",
-          "approach": "none"
+          "date": "2025-11-04",
+          "notes": "Discovery call focused on production downtime costs. VP Operations shared current manual scheduling pain points.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
         },
         {
           "call_number": 2,
-          "date": "2024-06-15",
-          "notes": "Discussed pricing; CFO raised concerns about subscription cost of $12,000 per year. Projected annual savings of $45,000, yielding a 275% ROI.",
-          "objection_type": "pricing",
-          "stakeholder": "Chief Financial Officer",
+          "date": "2025-11-18",
+          "notes": "ROI model review with CFO. Walked through projected 14-month payback based on reduced overtime.",
+          "objection_type": "integration",
           "approach": "roi_framing"
         },
         {
           "call_number": 3,
-          "date": "2024-06-20",
-          "notes": "Final contract review completed; legal approved terms.",
-          "objection_type": "none",
-          "stakeholder": "Legal Counsel",
-          "approach": "none"
+          "date": "2025-12-02",
+          "notes": "Technical deep-dive with IT. Confirmed API compatibility with existing ERP.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-12-16",
+          "notes": "Final commercial discussion. CFO approved after seeing quantified efficiency gains.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
         }
       ]
     },
     {
       "deal_id": "D002",
-      "company_name": "BlueWave Payments",
-      "deal_size": 150000,
-      "stage": "closed_lost",
+      "company_name": "Delta Health",
+      "deal_size": 240000,
+      "stage": "closed_won",
+      "industry": "Healthcare",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Deliver security whitepaper and SOC 2 report by Friday",
+          "fulfilled": true
+        },
+        {
+          "promise": "Draft pilot success criteria document",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-07-05",
-          "notes": "Demo of risk analytics module; VP of Product liked real-time scoring.",
-          "objection_type": "none",
-          "stakeholder": "VP of Product",
-          "approach": "none"
+          "date": "2025-10-15",
+          "notes": "Initial scoping of patient flow bottlenecks. CMO expressed strong interest in phased clinic rollout.",
+          "objection_type": "security",
+          "approach": "phased_rollout"
         },
         {
           "call_number": 2,
-          "date": "2024-07-10",
-          "notes": "Pricing discussion; VP of Finance asked about total cost of $18,000 per year. Offered 10% discount reducing price to $16,200.",
-          "objection_type": "pricing",
-          "stakeholder": "VP of Finance",
-          "approach": "discount_only"
+          "date": "2025-10-29",
+          "notes": "Security questionnaire review with CIO. Addressed HIPAA controls and audit logging.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
         },
         {
           "call_number": 3,
-          "date": "2024-07-12",
-          "notes": "Decision delayed due to internal budget freeze; no further movement.",
+          "date": "2025-11-12",
+          "notes": "Pilot proposal discussion. Agreed on three-clinic starting scope before full network expansion.",
           "objection_type": "timing",
-          "stakeholder": "Chief Operating Officer",
-          "approach": "none"
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-11-26",
+          "notes": "Contract review. Procurement confirmed phased payment schedule aligned with rollout gates.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
         }
       ]
     },
     {
       "deal_id": "D003",
-      "company_name": "MediPulse Solutions",
-      "deal_size": 1250000,
-      "stage": "closed_won",
+      "company_name": "BetaTech Solutions",
+      "deal_size": 95000,
+      "stage": "closed_lost",
+      "industry": "Software",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Send revised quote with maximum discount by Wednesday",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-02-05",
-          "notes": "Introduced platform features to CTO, highlighted integration with existing EHR. Discussed timeline for pilot rollout in Q2.",
-          "objection_type": "none",
-          "stakeholder": "Chief Technology Officer",
-          "approach": "none"
+          "date": "2025-11-10",
+          "notes": "Demo focused on feature parity with current tool. CEO immediately asked for aggressive discount.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
         },
         {
           "call_number": 2,
-          "date": "2024-03-12",
-          "notes": "Finance VP questioned total cost versus projected savings. Calculated $2.1M annual savings from reduced readmissions.",
-          "objection_type": "pricing",
-          "stakeholder": "Vice President of Finance",
-          "approach": "roi_framing"
+          "date": "2025-11-24",
+          "notes": "Pricing negotiation. Offered 22% discount but team still compared to lower-cost alternative.",
+          "objection_type": "competitor",
+          "approach": "discount_only"
         },
         {
           "call_number": 3,
-          "date": "2024-04-01",
-          "notes": "Final contract review with CFO, confirmed compliance and data security clauses. Sent signed agreement for execution.",
-          "objection_type": "none",
-          "stakeholder": "Chief Financial Officer",
-          "approach": "none"
+          "date": "2025-12-08",
+          "notes": "Final attempt to close. Engineering raised integration effort concerns that discount did not address.",
+          "objection_type": "integration",
+          "approach": "discount_only"
         }
       ]
     },
     {
       "deal_id": "D004",
-      "company_name": "ShopSphere Retailers",
-      "deal_size": 780000,
-      "stage": "closed_lost",
+      "company_name": "Crest Financial",
+      "deal_size": 175000,
+      "stage": "negotiation",
+      "industry": "Financial Services",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Provide updated multi-year discount proposal by next Monday",
+          "fulfilled": true
+        },
+        {
+          "promise": "Share SOC 2 Type II and pen-test summary",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-05-10",
-          "notes": "Demoed analytics dashboard to VP of Merchandising, showed potential uplift in conversion rates. Scheduled follow\u2011up for pricing discussion.",
-          "objection_type": "none",
-          "stakeholder": "Vice President of Merchandising",
-          "approach": "none"
+          "date": "2025-12-01",
+          "notes": "Discovery around loan origination bottlenecks. Head of Digital liked the automation angle.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
         },
         {
           "call_number": 2,
-          "date": "2024-05-22",
-          "notes": "Pricing objection raised by Procurement Lead; offered a 12% discount to meet budget constraints. Discount reduces ARR to $688,000.",
-          "objection_type": "pricing",
-          "stakeholder": "Procurement Lead",
+          "date": "2025-12-15",
+          "notes": "Security review kickoff. CISO requested detailed data residency and encryption documentation.",
+          "objection_type": "security",
           "approach": "discount_only"
         },
         {
           "call_number": 3,
-          "date": "2024-06-02",
-          "notes": "Decision delayed due to competing vendor offering a free trial. No further action taken; prospect opted for competitor solution.",
-          "objection_type": "competitor",
-          "stakeholder": "Head of Digital Strategy",
-          "approach": "none"
+          "date": "2026-01-05",
+          "notes": "Commercial discussion. Procurement pushed hard for multi-year discount before any pilot commitment.",
+          "objection_type": "security",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 4,
+          "date": "2026-01-19",
+          "notes": "Follow-up on revised pricing. Still negotiating terms; no decision yet.",
+          "objection_type": "security",
+          "approach": "discount_only"
         }
       ]
     },
     {
       "deal_id": "D005",
-      "company_name": "TransEdge Freight Solutions",
-      "deal_size": 275000,
-      "stage": "closed_won",
+      "company_name": "Epsilon Retail",
+      "deal_size": 110000,
+      "stage": "closed_lost",
+      "industry": "Retail",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Match competitor pricing and send updated quote by Thursday",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-03-05",
-          "notes": "Introduced platform capabilities to VP of Operations; highlighted 12% reduction in routing costs based on pilot data.",
-          "objection_type": "none",
-          "stakeholder": "VP of Operations",
-          "approach": "none"
+          "date": "2025-10-20",
+          "notes": "Demo of inventory forecasting module. VP E-commerce saw clear fit with peak-season challenges.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
         },
         {
           "call_number": 2,
-          "date": "2024-03-12",
-          "notes": "Discussed pricing; presented ROI model showing $33k annual savings, equating to 150% ROI in 9 months.",
-          "objection_type": "pricing",
-          "stakeholder": "Chief Financial Officer",
-          "approach": "roi_framing"
+          "date": "2025-11-03",
+          "notes": "Pricing discussion. CFO demanded price match against a competitor quote.",
+          "objection_type": "competitor",
+          "approach": "discount_only"
         },
         {
           "call_number": 3,
-          "date": "2024-03-19",
-          "notes": "Final contract review with CIO; confirmed integration timeline of 4 weeks and no hidden fees.",
-          "objection_type": "timing",
-          "stakeholder": "Chief Information Officer",
-          "approach": "none"
+          "date": "2025-11-17",
+          "notes": "Attempted to reframe value beyond price. CFO remained fixed on matching the lower number.",
+          "objection_type": "competitor",
+          "approach": "discount_only"
         }
       ]
     },
     {
       "deal_id": "D006",
-      "company_name": "Helios Power Grid Ltd",
-      "deal_size": 420000,
-      "stage": "closed_lost",
+      "company_name": "Foxtrot Logistics",
+      "deal_size": 145000,
+      "stage": "negotiation",
+      "industry": "Logistics",
+      "approach_used": "pilot",
+      "promises": [
+        {
+          "promise": "Send three relevant logistics case studies by Friday",
+          "fulfilled": true
+        },
+        {
+          "promise": "Schedule technical integration workshop",
+          "fulfilled": false
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-04-02",
-          "notes": "Demoed analytics dashboard to Director of Energy Trading; noted potential 8% increase in load forecasting accuracy.",
-          "objection_type": "none",
-          "stakeholder": "Director of Energy Trading",
-          "approach": "none"
+          "date": "2026-01-12",
+          "notes": "Introductory call exploring route optimization pain points. COO requested case studies from similar fleets.",
+          "objection_type": "integration",
+          "approach": "pilot"
         },
         {
           "call_number": 2,
-          "date": "2024-04-09",
-          "notes": "Pricing discussion; offered a 10% discount to meet budget constraints, reducing annual fee to $378,000.",
-          "objection_type": "pricing",
-          "stakeholder": "Chief Procurement Officer",
-          "approach": "discount_only"
+          "date": "2026-01-26",
+          "notes": "Product walkthrough focused on real-time tracking. Fleet manager raised questions about driver adoption.",
+          "objection_type": "timing",
+          "approach": "pilot"
         },
         {
           "call_number": 3,
-          "date": "2024-04-16",
-          "notes": "Follow\u2011up call with VP of Strategy; competitor's solution promised faster rollout, leading client to postpone decision.",
-          "objection_type": "competitor",
-          "stakeholder": "VP of Strategy",
-          "approach": "none"
+          "date": "2026-02-09",
+          "notes": "Follow-up on integration with existing TMS. Still in early evaluation; no commercial discussion yet.",
+          "objection_type": "timing",
+          "approach": "pilot"
         }
       ]
     },
     {
       "deal_id": "D007",
-      "company_name": "Bluecrest Insurance Group",
-      "deal_size": 275000,
+      "company_name": "Gamma Energy Systems",
+      "deal_size": 265000,
       "stage": "closed_won",
+      "industry": "Energy",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Deliver custom ROI model with their outage data",
+          "fulfilled": true
+        },
+        {
+          "promise": "Provide air-gap deployment reference architecture",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-03-12",
-          "notes": "Introduced the platform and highlighted integration with existing policy admin system. Prospect expressed interest in automating claims processing.",
-          "objection_type": "none",
-          "stakeholder": "Chief Operations Officer",
-          "approach": "none"
+          "date": "2025-11-05",
+          "notes": "Explored outage prediction use case. VP Operations quantified current manual analysis costs.",
+          "objection_type": "security",
+          "approach": "roi_framing"
         },
         {
           "call_number": 2,
-          "date": "2024-04-05",
-          "notes": "Discussed pricing; prospect raised cost concerns. Presented ROI model showing $1.2M annual savings over three years.",
+          "date": "2025-11-19",
+          "notes": "ROI presentation to finance. Demonstrated potential 18% reduction in unplanned downtime.",
           "objection_type": "pricing",
-          "stakeholder": "Chief Financial Officer",
           "approach": "roi_framing"
         },
         {
           "call_number": 3,
-          "date": "2024-04-18",
-          "notes": "Final walkthrough of dashboard and security compliance; prospect signed the agreement. Implementation kickoff scheduled for May 10.",
-          "objection_type": "none",
-          "stakeholder": "VP of Technology",
-          "approach": "none"
+          "date": "2025-12-03",
+          "notes": "Security architecture review. Addressed air-gapped deployment options.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-12-17",
+          "notes": "Commercial close. CFO signed after seeing clear payback within first year.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
         }
       ]
     },
     {
       "deal_id": "D008",
-      "company_name": "NovaTel Communications",
-      "deal_size": 420000,
-      "stage": "closed_lost",
+      "company_name": "Helix Biotech",
+      "deal_size": 198000,
+      "stage": "closed_won",
+      "industry": "Biotechnology",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Share data processing addendum and BAA template",
+          "fulfilled": true
+        },
+        {
+          "promise": "Draft pilot KPI dashboard mockup",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-02-20",
-          "notes": "Presented SaaS solution for network performance monitoring. Client noted current vendor's dashboard limitations.",
-          "objection_type": "none",
-          "stakeholder": "Director of Network Operations",
-          "approach": "none"
+          "date": "2025-10-22",
+          "notes": "Lab workflow mapping session. R&D lead identified three high-friction processes.",
+          "objection_type": "security",
+          "approach": "phased_rollout"
         },
         {
           "call_number": 2,
-          "date": "2024-03-08",
-          "notes": "Pricing objection raised; offered a 12% discount to meet budget constraints.",
-          "objection_type": "pricing",
-          "stakeholder": "Head of Procurement",
-          "approach": "discount_only"
+          "date": "2025-11-05",
+          "notes": "Phased rollout proposal for two research sites first. Security officer requested detailed data handling controls.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
         },
         {
           "call_number": 3,
-          "date": "2024-03-22",
-          "notes": "Client decided to extend contract with existing provider due to longer-term pricing guarantees. No further action required.",
-          "objection_type": "none",
-          "stakeholder": "Chief Technology Officer",
-          "approach": "none"
+          "date": "2025-11-19",
+          "notes": "Pilot success metrics agreed. Procurement aligned on staged purchase order structure.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-12-03",
+          "notes": "Contract finalized for initial phase with expansion options.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
         }
       ]
     },
     {
       "deal_id": "D009",
-      "company_name": "Apex Realty Solutions",
-      "deal_size": 250000,
-      "stage": "negotiation",
+      "company_name": "Ironclad Construction",
+      "deal_size": 72000,
+      "stage": "closed_lost",
+      "industry": "Construction",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Send revised quote with 25% discount by Friday",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-03-05",
-          "notes": "Discussed current property management workflow; client processes 1,200 listings monthly.",
-          "objection_type": "none",
-          "stakeholder": "Head of Operations",
-          "approach": "none"
+          "date": "2025-12-08",
+          "notes": "Demo of project cost tracking. Director liked real-time variance alerts.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
         },
         {
           "call_number": 2,
-          "date": "2024-03-12",
-          "notes": "Client balked at $50k annual fee; rep presented ROI of $200k savings from automation.",
-          "objection_type": "pricing",
-          "stakeholder": "CFO",
-          "approach": "roi_framing"
+          "date": "2025-12-22",
+          "notes": "Aggressive discount requested to match internal budget. Offered 25% reduction.",
+          "objection_type": "integration",
+          "approach": "discount_only"
         },
         {
           "call_number": 3,
-          "date": "2024-03-20",
-          "notes": "Negotiated contract terms, added tiered support; final agreement pending.",
-          "objection_type": "none",
-          "stakeholder": "VP of Finance",
-          "approach": "none"
+          "date": "2026-01-12",
+          "notes": "Field lead raised mobile usability concerns. Discount alone did not overcome adoption risk.",
+          "objection_type": "integration",
+          "approach": "discount_only"
         }
       ]
     },
     {
       "deal_id": "D010",
-      "company_name": "Pulse Media Group",
-      "deal_size": 180000,
-      "stage": "negotiation",
+      "company_name": "Jade Education Group",
+      "deal_size": 135000,
+      "stage": "closed_won",
+      "industry": "Education",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Provide FERPA compliance documentation package",
+          "fulfilled": true
+        },
+        {
+          "promise": "Deliver advisor time-savings calculation model",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-04-02",
-          "notes": "Introduced platform for ad inventory management; handles 3.5M impressions daily.",
-          "objection_type": "none",
-          "stakeholder": "Director of Digital",
-          "approach": "none"
+          "date": "2025-11-11",
+          "notes": "Campus-wide learning analytics discussion. VP saw strong alignment with retention goals.",
+          "objection_type": "security",
+          "approach": "roi_framing"
         },
         {
           "call_number": 2,
-          "date": "2024-04-09",
-          "notes": "Client cited $30k price; rep offered 10% discount lowering fee to $27k, highlighting cost per impression.",
+          "date": "2025-11-25",
+          "notes": "ROI framing around reduced advisor workload and improved student outcomes.",
           "objection_type": "pricing",
-          "stakeholder": "Chief Revenue Officer",
-          "approach": "discount_only"
+          "approach": "roi_framing"
         },
         {
           "call_number": 3,
-          "date": "2024-04-15",
-          "notes": "Final terms reviewed, added onboarding service; client to sign by end of month.",
-          "objection_type": "none",
-          "stakeholder": "Head of Procurement",
-          "approach": "none"
+          "date": "2025-12-09",
+          "notes": "Privacy impact assessment review. Addressed FERPA and student data controls.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-12-23",
+          "notes": "Budget approval secured after clear productivity case presented.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
         }
       ]
     },
     {
       "deal_id": "D011",
-      "company_name": "Velocity Motors Corp",
-      "deal_size": 1250000,
-      "stage": "negotiation",
+      "company_name": "Kestrel Insurance",
+      "deal_size": 210000,
+      "stage": "closed_lost",
+      "industry": "Insurance",
+      "approach_used": "security_review",
+      "promises": [
+        {
+          "promise": "Send complete security questionnaire responses and architecture diagrams by Nov 18",
+          "fulfilled": false
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-03-12",
-          "notes": "Initial discovery call; identified need for 200 vehicle telematics units at $250 each.",
-          "objection_type": "none",
-          "stakeholder": "VP of Procurement",
-          "approach": "none"
+          "date": "2025-10-14",
+          "notes": "Claims automation discovery. CCO quantified current average handling time.",
+          "objection_type": "security",
+          "approach": "security_review"
         },
         {
           "call_number": 2,
-          "date": "2024-04-05",
-          "notes": "Client questioned total cost; presented $50,000 ROI over 12 months based on reduced downtime metrics.",
-          "objection_type": "pricing",
-          "stakeholder": "CFO",
-          "approach": "roi_framing"
+          "date": "2025-10-28",
+          "notes": "Security questionnaire deep-dive. CISO flagged third-party data sharing concerns.",
+          "objection_type": "competitor",
+          "approach": "security_review"
         },
         {
           "call_number": 3,
-          "date": "2024-04-20",
-          "notes": "Discussed implementation timeline and integration with existing ERP; no new objections raised.",
-          "objection_type": "none",
-          "stakeholder": "Director of Operations",
-          "approach": "none"
+          "date": "2025-11-11",
+          "notes": "Follow-up on security controls. Promised additional documentation that was never delivered.",
+          "objection_type": "competitor",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-11-25",
+          "notes": "Deal stalled after missing security package deadline. CISO withdrew support.",
+          "objection_type": "competitor",
+          "approach": "security_review"
         }
       ]
     },
     {
       "deal_id": "D012",
-      "company_name": "Grandview Hospitality Group",
-      "deal_size": 780000,
-      "stage": "negotiation",
+      "company_name": "Lumen Media Networks",
+      "deal_size": 88000,
+      "stage": "closed_lost",
+      "industry": "Media",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Issue updated quote with 30% discount by year-end",
+          "fulfilled": true
+        }
+      ],
       "call_notes": [
         {
           "call_number": 1,
-          "date": "2024-02-18",
-          "notes": "Explored need for 150 property management SaaS licenses at $350 each per month.",
-          "objection_type": "none",
-          "stakeholder": "Head of IT",
-          "approach": "none"
+          "date": "2025-12-02",
+          "notes": "Workflow automation demo for content metadata. Head of Ops saw time savings potential.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
         },
         {
           "call_number": 2,
-          "date": "2024-03-02",
-          "notes": "Client compared our platform to a competitor; highlighted 15% higher occupancy uplift in case study.",
-          "objection_type": "competitor",
-          "stakeholder": "Director of Revenue Management",
-          "approach": "none"
+          "date": "2025-12-16",
+          "notes": "Pricing pressure from finance. Offered steep discount without addressing integration effort.",
+          "objection_type": "integration",
+          "approach": "discount_only"
         },
         {
           "call_number": 3,
-          "date": "2024-03-15",
-          "notes": "Pricing objection raised; offered 10% discount to bring annual spend to $702,000, emphasizing cost savings.",
-          "objection_type": "pricing",
-          "stakeholder": "VP of Finance",
+          "date": "2026-01-06",
+          "notes": "Engineering raised API limitations. Discount-only approach left technical concerns unresolved.",
+          "objection_type": "integration",
           "approach": "discount_only"
+        }
+      ]
+    },
+    {
+      "deal_id": "D013",
+      "company_name": "Meridian Pharmaceuticals",
+      "deal_size": 275000,
+      "stage": "closed_won",
+      "industry": "Pharmaceuticals",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Prepare phase-gate success criteria document",
+          "fulfilled": true
+        },
+        {
+          "promise": "Share validation support plan for regulated environments",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-07",
+          "notes": "Trial site coordination pain points mapped. VP Ops estimated significant coordinator overtime reduction.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-10-21",
+          "notes": "Phased approach proposed: start with three therapeutic areas before global rollout.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-04",
+          "notes": "IT compatibility and validation requirements reviewed. Agreed on controlled pilot gates.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-11-18",
+          "notes": "Finance approved phase-one investment with clear expansion triggers.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        }
+      ]
+    },
+    {
+      "deal_id": "D014",
+      "company_name": "Nexus Automotive",
+      "deal_size": 162000,
+      "stage": "closed_won",
+      "industry": "Automotive",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Deliver plant-specific ROI model with their changeover data",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-13",
+          "notes": "Shop-floor scheduling discussion. Plant manager highlighted changeover waste.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-27",
+          "notes": "ROI model built around reduced idle time and overtime. Numbers resonated with operations.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-11",
+          "notes": "IT confirmed MES integration path. Procurement accepted value-based pricing.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D015",
+      "company_name": "Orbit Telecom",
+      "deal_size": 225000,
+      "stage": "closed_lost",
+      "industry": "Telecommunications",
+      "approach_used": "security_review",
+      "promises": [
+        {
+          "promise": "Deliver complete threat model and access control matrix by Jan 5",
+          "fulfilled": false
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-04",
+          "notes": "Network incident response tooling evaluation. VP Ops liked predictive alerting concept.",
+          "objection_type": "security",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-18",
+          "notes": "Security review initiated. CISO requested detailed threat model and access controls.",
+          "objection_type": "competitor",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-08",
+          "notes": "Promised security documentation package never arrived. Momentum stalled.",
+          "objection_type": "competitor",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 4,
+          "date": "2026-01-22",
+          "notes": "Deal lost after competitor provided faster security clearance.",
+          "objection_type": "competitor",
+          "approach": "security_review"
+        }
+      ]
+    },
+    {
+      "deal_id": "D016",
+      "company_name": "Pinnacle Hospitality",
+      "deal_size": 98000,
+      "stage": "closed_won",
+      "industry": "Hospitality",
+      "approach_used": "pilot",
+      "promises": [
+        {
+          "promise": "Prepare two-property pilot scope and success metrics",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-06",
+          "notes": "Revenue management system evaluation. CRO focused on dynamic pricing accuracy.",
+          "objection_type": "pricing",
+          "approach": "pilot"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-20",
+          "notes": "ROI discussion around increased RevPAR from better forecasting.",
+          "objection_type": "timing",
+          "approach": "pilot"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-04",
+          "notes": "Pilot proposed for two properties. Finance approved limited initial spend.",
+          "objection_type": "timing",
+          "approach": "pilot"
+        }
+      ]
+    },
+    {
+      "deal_id": "D017",
+      "company_name": "Quantum Retail Analytics",
+      "deal_size": 155000,
+      "stage": "closed_lost",
+      "industry": "Retail Technology",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Send maximum discount proposal before holiday break",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-09",
+          "notes": "Platform integration discussion for their analytics suite. CTO saw technical fit.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-23",
+          "notes": "Heavy discount demanded to hit internal cost targets. Offered 28% reduction.",
+          "objection_type": "competitor",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-13",
+          "notes": "Despite discount, CEO chose lower-cost alternative that required less customization.",
+          "objection_type": "competitor",
+          "approach": "discount_only"
+        }
+      ]
+    },
+    {
+      "deal_id": "D018",
+      "company_name": "Ridgeway Logistics Partners",
+      "deal_size": 187000,
+      "stage": "closed_won",
+      "industry": "Logistics",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Build custom ROI using their fuel and overtime reports",
+          "fulfilled": true
+        },
+        {
+          "promise": "Provide TMS connector documentation",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-16",
+          "notes": "Route optimization and fuel cost discussion. COO shared current variance data.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-10-30",
+          "notes": "Detailed ROI model presented showing projected fuel and overtime savings.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-13",
+          "notes": "Technical integration workshop with fleet systems. Path confirmed.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-11-27",
+          "notes": "CFO approved after reviewing payback timeline under 11 months.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D019",
+      "company_name": "Summit Healthcare Partners",
+      "deal_size": 142000,
+      "stage": "closed_won",
+      "industry": "Healthcare",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Deliver BAA and privacy impact summary by Dec 5",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-17",
+          "notes": "Clinical documentation improvement discussion. CMIO identified high-priority clinics.",
+          "objection_type": "security",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-01",
+          "notes": "Phased rollout plan for five clinics first. Privacy concerns addressed with BAA and controls.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-15",
+          "notes": "Pilot metrics and expansion criteria agreed. Contract executed for phase one.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        }
+      ]
+    },
+    {
+      "deal_id": "D020",
+      "company_name": "Titan Manufacturing Group",
+      "deal_size": 119000,
+      "stage": "closed_lost",
+      "industry": "Manufacturing",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Submit revised quote with maximum available discount",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-05",
+          "notes": "Predictive maintenance evaluation. Plant director saw potential downtime reduction.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-19",
+          "notes": "Procurement demanded deep discount to fit remaining budget. Discount offered.",
+          "objection_type": "integration",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-09",
+          "notes": "Maintenance team raised sensor integration complexity. Discount did not resolve technical risk.",
+          "objection_type": "integration",
+          "approach": "discount_only"
+        }
+      ]
+    },
+    {
+      "deal_id": "D021",
+      "company_name": "Unity Financial Advisors",
+      "deal_size": 168000,
+      "stage": "closed_won",
+      "industry": "Financial Services",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Provide advisor time-study based ROI model",
+          "fulfilled": true
+        },
+        {
+          "promise": "Share security control matrix",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-23",
+          "notes": "Advisor productivity platform discussion. Head of Experience quantified time spent on manual reporting.",
+          "objection_type": "security",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-06",
+          "notes": "ROI framing around advisor capacity and client retention impact.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-20",
+          "notes": "Security review completed satisfactorily. COO approved based on capacity case.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D022",
+      "company_name": "Vanguard Industrial Supply",
+      "deal_size": 93000,
+      "stage": "closed_lost",
+      "industry": "Wholesale Distribution",
+      "approach_used": "pilot",
+      "promises": [
+        {
+          "promise": "Send full integration architecture and effort estimate by Dec 2",
+          "fulfilled": false
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-14",
+          "notes": "Inventory optimization demo. VP Supply Chain liked demand sensing features.",
+          "objection_type": "integration",
+          "approach": "pilot"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-28",
+          "notes": "Promised detailed integration estimate and architecture never delivered.",
+          "objection_type": "timing",
+          "approach": "pilot"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-12",
+          "notes": "Deal lost after IT refused to proceed without technical package and competitor moved faster.",
+          "objection_type": "timing",
+          "approach": "pilot"
+        }
+      ]
+    },
+    {
+      "deal_id": "D023",
+      "company_name": "Willowbrook Education Services",
+      "deal_size": 76000,
+      "stage": "closed_won",
+      "industry": "Education",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Draft single-campus pilot plan with KPIs",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-03",
+          "notes": "Early alert system for at-risk students discussed. Director saw clear retention upside.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-17",
+          "notes": "Phased approach proposed starting with one campus. Budget approved for limited pilot.",
+          "objection_type": "pricing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-07",
+          "notes": "Pilot success criteria finalized and agreement signed.",
+          "objection_type": "pricing",
+          "approach": "phased_rollout"
+        }
+      ]
+    },
+    {
+      "deal_id": "D024",
+      "company_name": "Xenon Software Labs",
+      "deal_size": 205000,
+      "stage": "closed_won",
+      "industry": "Software",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Deliver developer productivity ROI model using their sprint data",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-09",
+          "notes": "Internal tooling modernization discussion. VP Product quantified engineering time waste.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-10-23",
+          "notes": "ROI model focused on developer productivity and faster release cycles.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-06",
+          "notes": "Technical proof-of-concept successful. Finance approved multi-year agreement.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D025",
+      "company_name": "Yellowstone Energy Partners",
+      "deal_size": 132000,
+      "stage": "closed_lost",
+      "industry": "Energy",
+      "approach_used": "security_review",
+      "promises": [
+        {
+          "promise": "Provide complete control evidence and architecture by Dec 12",
+          "fulfilled": false
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-21",
+          "notes": "Field data collection platform evaluation. Ops director liked offline capability.",
+          "objection_type": "security",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-05",
+          "notes": "Security review started. Promised detailed control evidence package delayed repeatedly.",
+          "objection_type": "timing",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-19",
+          "notes": "Cybersecurity manager blocked further progress after missed documentation deadlines.",
+          "objection_type": "timing",
+          "approach": "security_review"
+        }
+      ]
+    },
+    {
+      "deal_id": "D026",
+      "company_name": "Zephyr Airlines Group",
+      "deal_size": 248000,
+      "stage": "closed_won",
+      "industry": "Aviation",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Prepare fleet-segmented pilot plan and success gates",
+          "fulfilled": true
+        },
+        {
+          "promise": "Share data validation and interface specifications",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-28",
+          "notes": "Aircraft maintenance planning discussion. VP quantified current scheduling inefficiencies.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-11",
+          "notes": "Phased rollout proposed: start with narrow-body fleet before wide-body expansion.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-25",
+          "notes": "Integration and data validation plan reviewed. Finance approved phase-one funding.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-12-09",
+          "notes": "Contract executed with clear expansion options tied to pilot metrics.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        }
+      ]
+    },
+    {
+      "deal_id": "D027",
+      "company_name": "Apex Food Distributors",
+      "deal_size": 87000,
+      "stage": "closed_lost",
+      "industry": "Food & Beverage",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Issue year-end discount quote by Dec 27",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-10",
+          "notes": "Warehouse slotting and labor planning demo. VP Logistics saw potential efficiency gains.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-24",
+          "notes": "Heavy discount requested to close before year-end. 27% reduction offered.",
+          "objection_type": "integration",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-14",
+          "notes": "Systems lead raised WMS integration risk. Discount alone insufficient to proceed.",
+          "objection_type": "integration",
+          "approach": "discount_only"
+        }
+      ]
+    },
+    {
+      "deal_id": "D028",
+      "company_name": "BrightPath Insurance Brokers",
+      "deal_size": 156000,
+      "stage": "closed_won",
+      "industry": "Insurance",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Deliver support-ticket reduction ROI model",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-03",
+          "notes": "Producer portal modernization discussion. Head of Experience shared current support ticket volume.",
+          "objection_type": "security",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-17",
+          "notes": "ROI model around reduced support load and faster quote turnaround presented.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-01",
+          "notes": "Security controls reviewed and accepted. COO approved investment.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D029",
+      "company_name": "Cascade Medical Devices",
+      "deal_size": 193000,
+      "stage": "closed_won",
+      "industry": "Medical Devices",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Provide validation support plan and site rollout sequence",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-17",
+          "notes": "Quality management system enhancement discussion. VP Quality identified audit preparation bottlenecks.",
+          "objection_type": "security",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-10-31",
+          "notes": "Phased rollout proposed starting with two manufacturing sites.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-14",
+          "notes": "Compliance and validation requirements addressed. Procurement aligned on staged approach.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-11-28",
+          "notes": "Phase-one agreement signed with clear expansion path.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        }
+      ]
+    },
+    {
+      "deal_id": "D030",
+      "company_name": "Driftwood Coastal Resorts",
+      "deal_size": 67000,
+      "stage": "closed_lost",
+      "industry": "Hospitality",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Send maximum discount quote before year close",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-11",
+          "notes": "Guest experience and upselling tool evaluation. Regional GM liked personalization features.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-25",
+          "notes": "Discount requested to fit remaining annual budget. Aggressive reduction offered.",
+          "objection_type": "timing",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-15",
+          "notes": "Corporate IT raised integration timeline concerns. Discount did not address operational risk.",
+          "objection_type": "timing",
+          "approach": "discount_only"
+        }
+      ]
+    },
+    {
+      "deal_id": "D031",
+      "company_name": "Evergreen Utilities Cooperative",
+      "deal_size": 221000,
+      "stage": "closed_won",
+      "industry": "Utilities",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Build outage-minute reduction ROI using their historical data",
+          "fulfilled": true
+        },
+        {
+          "promise": "Deliver security architecture and control mapping",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-10",
+          "notes": "Outage management and crew dispatch discussion. Director quantified current response delays.",
+          "objection_type": "security",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-10-24",
+          "notes": "ROI framing around reduced outage minutes and crew overtime presented.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-07",
+          "notes": "Security architecture accepted after detailed review. CFO approved based on quantified impact.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D032",
+      "company_name": "Frontier Banking Group",
+      "deal_size": 179000,
+      "stage": "closed_lost",
+      "industry": "Banking",
+      "approach_used": "security_review",
+      "promises": [
+        {
+          "promise": "Submit complete vendor risk and security package by Dec 5",
+          "fulfilled": false
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-12",
+          "notes": "Customer onboarding automation evaluation. Digital Channels lead saw conversion upside.",
+          "objection_type": "security",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-26",
+          "notes": "Security and vendor risk review initiated. Critical documentation package promised.",
+          "objection_type": "competitor",
+          "approach": "security_review"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-10",
+          "notes": "Promised security and risk package never delivered. CISO formally objected and process stopped.",
+          "objection_type": "competitor",
+          "approach": "security_review"
+        }
+      ]
+    },
+    {
+      "deal_id": "D033",
+      "company_name": "Horizon AgriTech",
+      "deal_size": 114000,
+      "stage": "closed_won",
+      "industry": "Agriculture Technology",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Deliver support-load reduction ROI model",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-06",
+          "notes": "Farm management platform scaling discussion. VP Ops shared current support load challenges.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-20",
+          "notes": "ROI model focused on reduced support tickets and faster onboarding of new growers.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-10",
+          "notes": "Technical fit confirmed. Finance approved after reviewing capacity gains.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        }
+      ]
+    },
+    {
+      "deal_id": "D034",
+      "company_name": "Indigo Transit Authority",
+      "deal_size": 203000,
+      "stage": "closed_won",
+      "industry": "Transportation",
+      "approach_used": "phased_rollout",
+      "promises": [
+        {
+          "promise": "Prepare bus-fleet pilot plan and expansion criteria",
+          "fulfilled": true
+        },
+        {
+          "promise": "Share interface specifications for existing systems",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-10-21",
+          "notes": "Fleet maintenance and scheduling platform evaluation. COO highlighted overtime and delay costs.",
+          "objection_type": "timing",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-04",
+          "notes": "Phased rollout proposed: start with bus fleet before expanding to rail.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-11-18",
+          "notes": "IT integration path and data requirements reviewed. Budget approved phase-one allocation.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        },
+        {
+          "call_number": 4,
+          "date": "2025-12-02",
+          "notes": "Agreement signed with clear success metrics for expansion.",
+          "objection_type": "integration",
+          "approach": "phased_rollout"
+        }
+      ]
+    },
+    {
+      "deal_id": "D035",
+      "company_name": "Jade Harbor Logistics",
+      "deal_size": 89000,
+      "stage": "closed_lost",
+      "industry": "Logistics",
+      "approach_used": "discount_only",
+      "promises": [
+        {
+          "promise": "Send revised discount quote by Dec 30",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-12-13",
+          "notes": "Yard management and dock scheduling demo. Director saw potential dwell-time reduction.",
+          "objection_type": "pricing",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-12-27",
+          "notes": "Discount offered to close remaining budget. 24% reduction proposed.",
+          "objection_type": "integration",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2026-01-16",
+          "notes": "IT raised concerns about real-time data feeds. Discount failed to overcome technical hesitation.",
+          "objection_type": "integration",
+          "approach": "discount_only"
+        }
+      ]
+    },
+    {
+      "deal_id": "D036",
+      "company_name": "Keystone Manufacturing Co",
+      "deal_size": 171000,
+      "stage": "closed_won",
+      "industry": "Manufacturing",
+      "approach_used": "roi_framing",
+      "promises": [
+        {
+          "promise": "Deliver plant-level OEE improvement ROI model",
+          "fulfilled": true
+        }
+      ],
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2025-11-07",
+          "notes": "OEE and production scheduling discussion. VP CI shared current bottleneck analysis.",
+          "objection_type": "pricing",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 2,
+          "date": "2025-11-21",
+          "notes": "ROI model built around reduced changeover and scrap. Strong alignment with CI goals.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2025-12-05",
+          "notes": "Technical integration confirmed. CFO approved after reviewing 13-month payback.",
+          "objection_type": "integration",
+          "approach": "roi_framing"
         }
       ]
     }

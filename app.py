@@ -10,6 +10,7 @@ load_dotenv()
 BANK = "deals-demo-v2"
 MODEL = "openai/gpt-oss-120b"
 EXTRA_FILE = "extra_companies.json"
+MEMORY_COUNT_FILE = "memory_count.json"
 NEW_OPT = "➕ New company"
 STAGE = {"closed_won": "🟢 Closed won", "closed_lost": "🔴 Closed lost", "negotiation": "🟡 Negotiation"}
 EXAMPLE_NOTE = ("CFO said our price is 20% over budget and mentioned they are also talking to a competitor. "
@@ -24,6 +25,10 @@ st.markdown("""
 .hero p {color: rgba(255,255,255,0.88); margin: .3rem 0 0 0;}
 .step {padding: .5rem .8rem; border-left: 3px solid #9333ea; background: rgba(147,51,234,.10);
        border-radius: 6px; margin-bottom: .5rem; font-size: .88rem;}
+.answer-card {padding: 1rem 1.1rem; border: 1px solid rgba(124,58,237,.45);
+              background: rgba(124,58,237,.08); border-radius: 12px; margin: .8rem 0;}
+.answer-title {font-weight: 700; font-size: 1.05rem; margin-bottom: .5rem;}
+.small-muted {font-size: .82rem; opacity: .72;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -49,10 +54,49 @@ def save_extra(names):
         json.dump(names, f)
 
 
+def seed_memory_count(deals):
+    """Count the seed call notes used as initial memory events."""
+    return sum(len(d.get("call_notes", [])) for d in deals)
+
+
+def load_memory_count(deals):
+    seed_count = seed_memory_count(deals)
+    if os.path.exists(MEMORY_COUNT_FILE):
+        try:
+            with open(MEMORY_COUNT_FILE) as f:
+                saved = int(json.load(f).get("count", seed_count))
+            return max(saved, seed_count)
+        except (ValueError, TypeError, json.JSONDecodeError):
+            pass
+    save_memory_count(seed_count)
+    return seed_count
+
+
+def save_memory_count(count):
+    with open(MEMORY_COUNT_FILE, "w") as f:
+        json.dump({"count": int(count)}, f)
+
+
+def increment_memory_count(deals):
+    count = load_memory_count(deals) + 1
+    save_memory_count(count)
+    return count
+
+
+def show_answer(answer, title):
+    st.markdown(
+        f'<div class="answer-card"><div class="answer-title">💡 {title}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(answer)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
 deals = load_deals()
 deal_map = {d["company_name"]: d for d in deals}
 extras = load_extra()
 companies = list(deal_map) + [e for e in extras if e not in deal_map]
+memory_count = load_memory_count(deals)
 
 
 # ---------- memory + LLM helpers ----------
@@ -82,14 +126,39 @@ def get_brief(company):
     ctx = recall_context(f"{company} deal history, objections, stakeholders", tags=[f"company:{company}"])
     if not ctx.strip():
         return "No memories found for this company yet.", ctx
-    return ask_llm(f"Deal history:\n\n{ctx}\n\nWrite a short pre-call brief: what's happened, key objections, "
-                   "stakeholders, and one specific piece of advice for the next call."), ctx
+    return ask_llm(f"""Deal history:
+
+{ctx}
+
+Write a short pre-call brief.
+Start with exactly 3 short lines under the heading "Do this now:".
+Those 3 lines must contain the most actionable next steps for the rep.
+Then give brief details covering what happened, key objections, stakeholders, and supporting evidence.
+Keep the whole response concise."""), ctx
 
 
 def get_pattern_insight():
-    ctx = recall_context("pricing objections, rep approach and deal outcomes across all deals", max_tokens=3500, budget="high")
-    return ask_llm(f"Notes from many past deals:\n\n{ctx}\n\nIdentify which objection-handling approaches correlated with won "
-                   "vs lost/stuck deals. Cite specific deal names as evidence. Give one clear recommendation."), ctx
+    ctx = recall_context(
+        "pricing objections, rep approach and deal outcomes across all deals",
+        max_tokens=3500,
+        budget="high",
+    )
+
+    answer = ask_llm(
+        f"""Notes from many past deals:
+
+{ctx}
+
+Identify which objection-handling approaches correlated with won
+vs lost/stuck deals.
+
+Cite specific deal names as evidence.
+
+Give one clear recommendation."""
+    )
+
+    return answer, ctx
+
 
 
 def simulate_new_deal(note):
@@ -110,6 +179,42 @@ def fill_example():
     st.session_state["company_input"] = "Helix Robotics"
 
 
+SIM_SAMPLES = {
+    "Pricing objection — customer says the solution is over budget.":
+        "Customer says the solution is over budget and wants justification for the price.",
+    "Competitor objection — customer is comparing another vendor.":
+        "Customer is comparing us with a competitor and wants to understand the difference.",
+    "Timing objection — customer wants to delay the decision.":
+        "Customer wants to delay the decision until next quarter because of internal timing.",
+    "Integration concern — customer wants to know how implementation will work.":
+        "Customer is concerned about integration and wants to understand how implementation will work.",
+}
+
+
+def fill_sim_sample():
+    choice = st.session_state.get("sim_sample")
+    if choice in SIM_SAMPLES:
+        st.session_state["note_input"] = SIM_SAMPLES[choice]
+
+
+LOG_SAMPLES = {
+    "Pricing / ROI — customer says the price is too high.":
+        "Customer says the price is too high and asks for ROI justification.",
+    "Phased rollout — customer wants to reduce implementation risk.":
+        "Customer wants a phased rollout before signing.",
+    "Competitor — customer is comparing another vendor.":
+        "Customer is comparing us with a competitor.",
+    "Timing — customer wants to postpone the decision.":
+        "Customer wants to postpone the decision until next quarter.",
+}
+
+
+def fill_log_sample():
+    choice = st.session_state.get("log_sample")
+    if choice in LOG_SAMPLES:
+        st.session_state["log_note"] = LOG_SAMPLES[choice]
+
+
 def save_to_memory():
     company = st.session_state.get("advice_company")
     note = st.session_state.get("advice_note")
@@ -119,8 +224,11 @@ def save_to_memory():
         if company not in current and company not in deal_map:
             current.append(company)
             save_extra(current)
+        global memory_count
+        memory_count = increment_memory_count(deals)
         st.session_state["brief_company"] = company
         st.session_state["save_msg"] = ("ok", f"Saved. Hindsight now remembers {company}. Open the Pre-Call Brief tab to see it.")
+        st.toast(f"Saved {company} to memory", icon="🧠")
     except Exception as e:
         st.session_state["save_msg"] = ("err", f"Could not save: {e}")
 
@@ -143,9 +251,12 @@ def log_call():
         if company not in current and company not in deal_map:
             current.append(company)
             save_extra(current)
+        global memory_count
+        memory_count = increment_memory_count(deals)
         ss["brief_company"] = company
         ss["log_note"] = ""
         ss["log_msg"] = ("ok", f"Logged. Hindsight has one more memory for {company}. Open Pre-Call Brief to see it.")
+        st.toast(f"Call saved for {company}", icon="✅")
     except Exception as e:
         ss["log_msg"] = ("err", f"Could not save: {e}")
 
@@ -158,8 +269,9 @@ with st.sidebar:
                 '<div class="step"><b>3. Reason</b><br>The LLM turns recalled memory into advice.</div>'
                 '<div class="step"><b>4. Learn</b><br>New calls saved live are remembered instantly.</div>', unsafe_allow_html=True)
     st.divider()
-    st.caption(f"Memory bank: `{BANK}`")
-    st.caption(f"{len(deals)} seed deals + {len(extras)} saved live")
+    st.metric("🧠 Memory events", memory_count)
+    st.caption(f"{len(deals)} seed deals + {len(extras)} saved live companies")
+    st.caption(f"Bank: `{BANK}`")
 
 # ---------- main ----------
 st.markdown('<div class="hero"><h1>🧠 Deal Intelligence Agent</h1>'
@@ -184,7 +296,7 @@ with tab1:
     if st.button("Generate pre-call brief", type="primary"):
         with st.spinner("Recalling this deal from Hindsight..."):
             answer, ctx = get_brief(company)
-        st.markdown(answer)
+        show_answer(answer, "Do this now")
         show_memory(ctx, "ctx_brief")
 
 with tab2:
@@ -192,12 +304,18 @@ with tab2:
     if st.button("Analyze patterns across all deals", type="primary"):
         with st.spinner("Recalling every deal and looking for patterns..."):
             answer, ctx = get_pattern_insight()
-        st.markdown(answer)
+        show_answer(answer, "Do this now")
         show_memory(ctx, "ctx_pattern")
 
 with tab3:
     st.write("Paste a brand-new call note. The agent recalls similar past deals, advises, and can save the call to memory.")
-    st.button("✨ Use example note", on_click=fill_example)
+    st.button("✨ Fill recommended example", on_click=fill_example)
+    st.selectbox(
+        "Quick sample",
+        ["Select a sample"] + list(SIM_SAMPLES.keys()),
+        key="sim_sample",
+        on_change=fill_sim_sample,
+    )
     st.text_input("Company name", key="company_input", placeholder="e.g. Helix Robotics")
     st.text_area("New call note", key="note_input", height=130,
                  placeholder="e.g. CFO said the price is 20% over budget and mentioned a competitor...")
@@ -212,7 +330,7 @@ with tab3:
                                     advice_company=st.session_state.get("company_input", "").strip() or "Unnamed deal",
                                     save_msg=None)
     if "advice" in st.session_state:
-        st.markdown(st.session_state["advice"])
+        show_answer(st.session_state["advice"], "Recommended Next Move")
         show_memory(st.session_state["advice_ctx"], "ctx_sim")
         st.button("💾 Save this call to memory", on_click=save_to_memory)
         msg = st.session_state.get("save_msg")
@@ -251,8 +369,17 @@ with tab5:
     c2.selectbox("Stage", ["prospecting", "negotiation", "closed_won", "closed_lost"], key="log_stage")
     c3.selectbox("Objection raised", ["none", "pricing", "competitor", "timing", "authority"], key="log_obj")
     st.text_input("Stakeholder on the call", key="log_who", placeholder="e.g. CFO")
+    st.selectbox(
+        "Quick call-note sample",
+        ["Select a sample"] + list(LOG_SAMPLES.keys()),
+        key="log_sample",
+        on_change=fill_log_sample,
+    )
     st.text_area("Call note", key="log_note", height=120, placeholder="What was discussed, promised, or objected to...")
     st.button("💾 Save to memory", type="primary", on_click=log_call, key="log_save")
     msg = st.session_state.get("log_msg")
     if msg:
         (st.success if msg[0] == "ok" else st.error)(msg[1])
+
+st.divider()
+st.caption("🧠 Deal Intelligence Agent • Hindsight memory + Groq • Phase 7 UI")
