@@ -1,0 +1,388 @@
+{
+  "deals": [
+    {
+      "deal_id": "D001",
+      "company_name": "Acme Forge Ltd",
+      "deal_size": 250000,
+      "stage": "closed_won",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-06-10",
+          "notes": "Introduced platform capabilities; CFO expressed interest in reducing inventory holding costs by 15%.",
+          "objection_type": "none",
+          "stakeholder": "Chief Financial Officer",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-06-15",
+          "notes": "Discussed pricing; CFO raised concerns about subscription cost of $12,000 per year. Projected annual savings of $45,000, yielding a 275% ROI.",
+          "objection_type": "pricing",
+          "stakeholder": "Chief Financial Officer",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-06-20",
+          "notes": "Final contract review completed; legal approved terms.",
+          "objection_type": "none",
+          "stakeholder": "Legal Counsel",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D002",
+      "company_name": "BlueWave Payments",
+      "deal_size": 150000,
+      "stage": "closed_lost",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-07-05",
+          "notes": "Demo of risk analytics module; VP of Product liked real-time scoring.",
+          "objection_type": "none",
+          "stakeholder": "VP of Product",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-07-10",
+          "notes": "Pricing discussion; VP of Finance asked about total cost of $18,000 per year. Offered 10% discount reducing price to $16,200.",
+          "objection_type": "pricing",
+          "stakeholder": "VP of Finance",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-07-12",
+          "notes": "Decision delayed due to internal budget freeze; no further movement.",
+          "objection_type": "timing",
+          "stakeholder": "Chief Operating Officer",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D003",
+      "company_name": "MediPulse Solutions",
+      "deal_size": 1250000,
+      "stage": "closed_won",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-02-05",
+          "notes": "Introduced platform features to CTO, highlighted integration with existing EHR. Discussed timeline for pilot rollout in Q2.",
+          "objection_type": "none",
+          "stakeholder": "Chief Technology Officer",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-03-12",
+          "notes": "Finance VP questioned total cost versus projected savings. Calculated $2.1M annual savings from reduced readmissions.",
+          "objection_type": "pricing",
+          "stakeholder": "Vice President of Finance",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-04-01",
+          "notes": "Final contract review with CFO, confirmed compliance and data security clauses. Sent signed agreement for execution.",
+          "objection_type": "none",
+          "stakeholder": "Chief Financial Officer",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D004",
+      "company_name": "ShopSphere Retailers",
+      "deal_size": 780000,
+      "stage": "closed_lost",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-05-10",
+          "notes": "Demoed analytics dashboard to VP of Merchandising, showed potential uplift in conversion rates. Scheduled follow\u2011up for pricing discussion.",
+          "objection_type": "none",
+          "stakeholder": "Vice President of Merchandising",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-05-22",
+          "notes": "Pricing objection raised by Procurement Lead; offered a 12% discount to meet budget constraints. Discount reduces ARR to $688,000.",
+          "objection_type": "pricing",
+          "stakeholder": "Procurement Lead",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-06-02",
+          "notes": "Decision delayed due to competing vendor offering a free trial. No further action taken; prospect opted for competitor solution.",
+          "objection_type": "competitor",
+          "stakeholder": "Head of Digital Strategy",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D005",
+      "company_name": "TransEdge Freight Solutions",
+      "deal_size": 275000,
+      "stage": "closed_won",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-03-05",
+          "notes": "Introduced platform capabilities to VP of Operations; highlighted 12% reduction in routing costs based on pilot data.",
+          "objection_type": "none",
+          "stakeholder": "VP of Operations",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-03-12",
+          "notes": "Discussed pricing; presented ROI model showing $33k annual savings, equating to 150% ROI in 9 months.",
+          "objection_type": "pricing",
+          "stakeholder": "Chief Financial Officer",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-03-19",
+          "notes": "Final contract review with CIO; confirmed integration timeline of 4 weeks and no hidden fees.",
+          "objection_type": "timing",
+          "stakeholder": "Chief Information Officer",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D006",
+      "company_name": "Helios Power Grid Ltd",
+      "deal_size": 420000,
+      "stage": "closed_lost",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-04-02",
+          "notes": "Demoed analytics dashboard to Director of Energy Trading; noted potential 8% increase in load forecasting accuracy.",
+          "objection_type": "none",
+          "stakeholder": "Director of Energy Trading",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-04-09",
+          "notes": "Pricing discussion; offered a 10% discount to meet budget constraints, reducing annual fee to $378,000.",
+          "objection_type": "pricing",
+          "stakeholder": "Chief Procurement Officer",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-04-16",
+          "notes": "Follow\u2011up call with VP of Strategy; competitor's solution promised faster rollout, leading client to postpone decision.",
+          "objection_type": "competitor",
+          "stakeholder": "VP of Strategy",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D007",
+      "company_name": "Bluecrest Insurance Group",
+      "deal_size": 275000,
+      "stage": "closed_won",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-03-12",
+          "notes": "Introduced the platform and highlighted integration with existing policy admin system. Prospect expressed interest in automating claims processing.",
+          "objection_type": "none",
+          "stakeholder": "Chief Operations Officer",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-04-05",
+          "notes": "Discussed pricing; prospect raised cost concerns. Presented ROI model showing $1.2M annual savings over three years.",
+          "objection_type": "pricing",
+          "stakeholder": "Chief Financial Officer",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-04-18",
+          "notes": "Final walkthrough of dashboard and security compliance; prospect signed the agreement. Implementation kickoff scheduled for May 10.",
+          "objection_type": "none",
+          "stakeholder": "VP of Technology",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D008",
+      "company_name": "NovaTel Communications",
+      "deal_size": 420000,
+      "stage": "closed_lost",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-02-20",
+          "notes": "Presented SaaS solution for network performance monitoring. Client noted current vendor's dashboard limitations.",
+          "objection_type": "none",
+          "stakeholder": "Director of Network Operations",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-03-08",
+          "notes": "Pricing objection raised; offered a 12% discount to meet budget constraints.",
+          "objection_type": "pricing",
+          "stakeholder": "Head of Procurement",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-03-22",
+          "notes": "Client decided to extend contract with existing provider due to longer-term pricing guarantees. No further action required.",
+          "objection_type": "none",
+          "stakeholder": "Chief Technology Officer",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D009",
+      "company_name": "Apex Realty Solutions",
+      "deal_size": 250000,
+      "stage": "negotiation",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-03-05",
+          "notes": "Discussed current property management workflow; client processes 1,200 listings monthly.",
+          "objection_type": "none",
+          "stakeholder": "Head of Operations",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-03-12",
+          "notes": "Client balked at $50k annual fee; rep presented ROI of $200k savings from automation.",
+          "objection_type": "pricing",
+          "stakeholder": "CFO",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-03-20",
+          "notes": "Negotiated contract terms, added tiered support; final agreement pending.",
+          "objection_type": "none",
+          "stakeholder": "VP of Finance",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D010",
+      "company_name": "Pulse Media Group",
+      "deal_size": 180000,
+      "stage": "negotiation",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-04-02",
+          "notes": "Introduced platform for ad inventory management; handles 3.5M impressions daily.",
+          "objection_type": "none",
+          "stakeholder": "Director of Digital",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-04-09",
+          "notes": "Client cited $30k price; rep offered 10% discount lowering fee to $27k, highlighting cost per impression.",
+          "objection_type": "pricing",
+          "stakeholder": "Chief Revenue Officer",
+          "approach": "discount_only"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-04-15",
+          "notes": "Final terms reviewed, added onboarding service; client to sign by end of month.",
+          "objection_type": "none",
+          "stakeholder": "Head of Procurement",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D011",
+      "company_name": "Velocity Motors Corp",
+      "deal_size": 1250000,
+      "stage": "negotiation",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-03-12",
+          "notes": "Initial discovery call; identified need for 200 vehicle telematics units at $250 each.",
+          "objection_type": "none",
+          "stakeholder": "VP of Procurement",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-04-05",
+          "notes": "Client questioned total cost; presented $50,000 ROI over 12 months based on reduced downtime metrics.",
+          "objection_type": "pricing",
+          "stakeholder": "CFO",
+          "approach": "roi_framing"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-04-20",
+          "notes": "Discussed implementation timeline and integration with existing ERP; no new objections raised.",
+          "objection_type": "none",
+          "stakeholder": "Director of Operations",
+          "approach": "none"
+        }
+      ]
+    },
+    {
+      "deal_id": "D012",
+      "company_name": "Grandview Hospitality Group",
+      "deal_size": 780000,
+      "stage": "negotiation",
+      "call_notes": [
+        {
+          "call_number": 1,
+          "date": "2024-02-18",
+          "notes": "Explored need for 150 property management SaaS licenses at $350 each per month.",
+          "objection_type": "none",
+          "stakeholder": "Head of IT",
+          "approach": "none"
+        },
+        {
+          "call_number": 2,
+          "date": "2024-03-02",
+          "notes": "Client compared our platform to a competitor; highlighted 15% higher occupancy uplift in case study.",
+          "objection_type": "competitor",
+          "stakeholder": "Director of Revenue Management",
+          "approach": "none"
+        },
+        {
+          "call_number": 3,
+          "date": "2024-03-15",
+          "notes": "Pricing objection raised; offered 10% discount to bring annual spend to $702,000, emphasizing cost savings.",
+          "objection_type": "pricing",
+          "stakeholder": "VP of Finance",
+          "approach": "discount_only"
+        }
+      ]
+    }
+  ]
+}
